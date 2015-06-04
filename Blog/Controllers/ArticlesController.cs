@@ -19,12 +19,12 @@ namespace Blog.Controllers
         // GET: Articles
         public ActionResult Index(int page=1)
         {
-            var articles = db.Articles.OrderBy(a => a.CreationDate).Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            var articles = db.Articles.OrderBy(a => a.Title).Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
             ViewBag.CurrentPage = page;
             ViewBag.PageSize = pageSize;
             ViewBag.TotalPages = Math.Ceiling( (double)db.Articles.Count()/pageSize);
-            return View(articles);
+            return View(articles.OrderBy(a => a.Title));
         }
 
         // GET: Articles/Details/5

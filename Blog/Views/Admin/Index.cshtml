@@ -3,7 +3,10 @@
     ViewBag.Title = "Articles";
 }
 
-<h2>Index</h2>
+<h2>Articles</h2>
+
+
+@Html.ActionLink("Create A New Article", "Create","Admin")
 
 @foreach (var item in Model)
 {
@@ -14,7 +17,6 @@
         @Html.ActionLink("Read Details", "Details", new { id = item.ID })||
         @Html.ActionLink("Edit", "Edit", new { id = item.ID })||
         @Html.ActionLink("Delete", "Delete", new { id = item.ID })||
-        @Html.ActionLink("Create", "Create", new { id= item.ID })||
         @Html.ActionLink("upload image", "upload", "Home")
     </div>
 }
