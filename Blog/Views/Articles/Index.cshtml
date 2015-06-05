@@ -14,6 +14,7 @@
         <div>@Html.Raw(HttpUtility.HtmlDecode(item.Body))</div>
      
         @Html.ActionLink("Read Details", "Details", new { id = item.ID })
+        @Html.ActionLink("Add Comments", "Details", new { id = item.ID })
     </div>
 }
 

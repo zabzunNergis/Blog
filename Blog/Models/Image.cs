@@ -12,8 +12,4 @@ namespace Blog.Models
         public string ImagePath { get; set; }
     }
 
-    public class ImageDBContext : DbContext
-    {
-        public DbSet<Image> Images { get; set; }
-    }
 }

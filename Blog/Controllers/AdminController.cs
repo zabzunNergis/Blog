@@ -80,7 +80,6 @@ namespace Blog.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 db.Articles.Add(article);
                 db.SaveChanges();
                 return RedirectToAction("Index");
