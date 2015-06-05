@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Blog.Models;
 using System.IO;
+using System.Web.Helpers;
 
 namespace Blog.Controllers
 {
@@ -79,7 +80,7 @@ namespace Blog.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+
                 db.Articles.Add(article);
                 db.SaveChanges();
                 return RedirectToAction("Index");
